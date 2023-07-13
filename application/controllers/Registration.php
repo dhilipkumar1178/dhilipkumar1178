@@ -347,4 +347,11 @@ public function admin_dashboard()
           $this->load->view('final/admin_dashboard');
           $this->load->view('admin/footer');
 }
+public function hallbooking()
+{
+          // $get = $this->input->get();
+          $this->load->view('admin/header');
+          $this->load->view('final/hall_booking');
+          $this->load->view('admin/footer');
+}
 }

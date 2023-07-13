@@ -112,15 +112,15 @@ a:hover{
         <!-- card -->
         <article class="p-4 rounded shadow-sm border-left
        mb-4">
-          <a href="#" class="d-flex align-items-center">
+          <a href="<?=base_url('Registration/hallbooking')?>" class="d-flex align-items-center">
             <span class="bi bi-box h5"></span>
-            <h5 class="ml-2">Products</h5>
+            <h5 class="ml-2">Booking</h5>
           </a>
         </article>
       </div>
       <div class="col-md-6 col-lg-4">
         <article class="p-4 rounded shadow-sm border-left mb-4">
-          <a href="#" class="d-flex align-items-center">
+          <a  class="d-flex align-items-center">
             <span class="bi bi-person h5"></span>
             <h5 class="ml-2">Customers</h5>
           </a>
