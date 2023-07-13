@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Signup</title>
+  <title>admin_signup</title>
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
@@ -31,47 +31,6 @@
                     <input type="text" id="" class="form-control form-control-lg" name="name" required/>
                   </div>
                 </div>
-                <div class="col-md-6 mb-4">
-
-                  <div class="form-outline">
-									<label class="form-label" >Email<span style="font-size:150%;color:red;">*</span></label>
-                    <input type="text" id="" class="form-control form-control-lg" name="email" required >
-                    
-                  </div>
-
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-									<label class="form-label" >Mobile No<span style="font-size:150%;color:red;">*</span></label>
-                    <input type="text" id="" class="form-control form-control-lg" name="mobile_no" required  >
-                  
-                  </div>
-
-                </div>
-                <div class="col-md-6 mb-4">
-                  <div class="form-outline">
-									<label class="form-label" >Department<span style="font-size:150%;color:red;">*</span></label>
-                    <input type="text" id="" class="form-control form-control-lg" name="department" required >
-
-                  </div>
-                </div>
-              </div>
-							<div class="row">
-							<div class="col-md-6 mb-4">
-                  <div class="form-outline">
-									<label class="form-label" >Year<span style="font-size:150%;color:red;">*</span></label>
-                    <input type="text" id="" class="form-control form-control-lg" name="year" required >
-                </div>
-              </div>
-                <div class="col-md-6 mb-4 d-flex align-items-center">
-                  <div class="form-outline datepicker w-100">
-									<label for="birthdayDate" >Dob<span style="font-size:150%;color:red;">*</span></label>
-                    <input type="date" class="form-control form-control-lg" id="birthdayDate" name="dob" required/>
-                  </div>
-                </div>
-              <div class="row">
                 <div class="col-md-6 mb-4 pb-2">
                   <div class="form-outline">
 									<label class="form-label" >Password<span style="font-size:150%;color:red;">*</span></label>
@@ -114,7 +73,7 @@
         // alert('x');
    
           $.ajax({
-              url:'<?php echo base_url('Registration/submit');?>',
+              url:'<?php echo base_url('Registration/admin_submit');?>',
               type:"POST",
               data:$("#frm").serialize(),
               dataType:"json",

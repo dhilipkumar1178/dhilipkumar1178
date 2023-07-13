@@ -8,12 +8,12 @@
   </head>
   		<body id="page-top">
         <div class="container-fluid">
-			<li><a href="<?php echo site_url('Registration/index'); ?>">User</a></li>
+			<li><a href="<?php echo site_url('Registration/login_index'); ?>">User</a></li>
               
           </div><br>
 		  <body id="pages-top">
         <div class="container-fluid">
-			  <li><a href="<?php echo site_url('Registration/admin'); ?>">Admin</a></li>
+			  <li><a href="<?php echo site_url('Registration/admin_login_index'); ?>">Admin</a></li>
           </div>
     
   </body>
