@@ -62,19 +62,19 @@ a:hover{
     </a>
     <a href="#" class="list-group-item list-group-item-action border-0 align-items-center">
       <span class="bi bi-box"></span>
-      <span class="ml-2">Products</span>
+      <span class="ml-2">Booking List</span>
     </a>
 
     <button class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#sale-collapse">
       <div>
         <span class="bi bi-cart-dash"></span>
-        <span class="ml-2">Sale</span>
+        <span class="ml-2">Hall Schedule</span>
       </div>
 
     <button class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#purchase-collapse">
       <div>
         <span class="bi bi-cart-plus"></span>
-        <span class="ml-2">Purchase</span>
+        <span class="ml-2">Total Registration</span>
       </div>
       <span class="bi bi-chevron-down small"></span>
     </button>
@@ -112,27 +112,28 @@ a:hover{
         <!-- card -->
         <article class="p-4 rounded shadow-sm border-left
        mb-4">
-          <a href="<?=base_url('Registration/hallbooking')?>" class="d-flex align-items-center">
+          <a href="<?=base_url('Registration/hallbooking')?>" class="d-flex align-items-center btn btn-success">
             <span class="bi bi-box h5"></span>
-            <h5 class="ml-2">Booking</h5>
+            <h5 class="ml-2">Booking List</h5>
           </a>
         </article>
       </div>
       <div class="col-md-6 col-lg-4">
         <article class="p-4 rounded shadow-sm border-left mb-4">
-          <a  class="d-flex align-items-center">
+          <a  class="d-flex align-items-center btn btn-secondary">
             <span class="bi bi-person h5"></span>
-            <h5 class="ml-2">Customers</h5>
+            <h5 class="ml-2">Hall Schedule</h5>
           </a>
         </article>
       </div>
       <div class="col-md-6 col-lg-4">
         <article class="p-4 rounded shadow-sm border-left mb-4">
-          <a href="#" class="d-flex align-items-center">
+          <a href="#" class="d-flex align-items-center btn btn-info">
             <span class="bi bi-person-check h5"></span>
-            <h5 class="ml-2">Sellers</h5>
+            <h5 class="ml-2">Total Registration</h5>
           </a>
         </article>
+				
       </div>
     </section>
 

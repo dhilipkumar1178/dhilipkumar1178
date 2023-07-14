@@ -55,6 +55,11 @@ class Registraion_model extends CI_Model
                 return false;
             }
         }
+
+		public function getname(){
+			return $this->db->get('hall')->result();
+		}
+
 		
     }
 

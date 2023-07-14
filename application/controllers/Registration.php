@@ -354,4 +354,16 @@ public function hallbooking()
           $this->load->view('final/hall_booking');
           $this->load->view('admin/footer');
 }
+public function booking_index()
+{
+          // $get = $this->input->get();
+          $this->load->view('admin/header');
+          $this->load->view('final/booking_form');
+          $this->load->view('admin/footer');
+}
+public function getnames(){
+	$halls = $this->registraion_model->getname();
+	$this->load->view('booking_form',array('halls'=>$halls));
+}
+
 }

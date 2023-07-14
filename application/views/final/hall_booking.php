@@ -189,8 +189,9 @@ body {
 			<p style="font-size:100%;color:brown;">Seminar Hall</p>
         </div>
       </div>
+				
       <div class="col-md-5 center-vertically">
-		<a class='btn btn-danger' href="<?=base_url('Registration/admin_index')?>" class="text-primary fw-bold">BOOK NOW</a>
+		<a class='btn btn-danger' href="<?=base_url('Registration/booking_index')?>" class="text-primary fw-bold">BOOK NOW</a>
       </div>
     </div>
 	
