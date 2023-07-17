@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Reservation</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -212,40 +212,13 @@
                         <h1>Make your reservation</h1>
                     </div>
                     <form>
-
-
-                        <div class="form-group">
-						<select name="hall" id="hall" class="form-control input-lg">
-							<option value="">Select Hall</option>
-							<?php foreach($halls as $hall) {?>
-								<option value="<?=$hall->hall_id?>"><?=$hall->hall_name?></option>
-							<?php } ?>
-						</select>
-						</div>
-
-
-
-
-
-
-
-
-
-
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group"> <input class="form-control" type="date" required> <span class="form-label">booking In</span> </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group"> <input class="form-control" placeholder="Time Slot" type="text" required> <span class="form-label">Time Slot</span> </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group"> <input class="form-control" type="email" placeholder="Enter your Email"> <span class="form-label">Email</span> </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group"> <input class="form-control" type="tel" placeholder="Enter you Phone"> <span class="form-label">Phone</span> </div>
+                                <div class="form-group"> <select type="text" name="time_slot" id="time_slot" class="form-control">
+    							</select>
                             </div>
                         </div>
                         <div class="form-btn"> <button class="submit-btn">Book Now</button> </div>
@@ -255,5 +228,7 @@
         </div>
     </div>
 </div>
+
+</script>
 </body>
 </html>

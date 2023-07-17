@@ -33,7 +33,7 @@
 <body>
     <div class="vh-100 d-flex justify-content-center align-items-center ">
         <div class="col-md-5 p-5 shadow-sm border rounded-5 border-primary bg-white">
-            <h2 class="text-center mb-4 text-primary">Login Form</h2>
+            <h2 class="text-center mb-4 text-primary">Admin Login Form</h2>
             
             <form class="form-horizontal" id="frm" method="post" action="" enctype="multipart/form-data">
             <div class="mb-3">

@@ -112,7 +112,7 @@ a:hover{
         <!-- card -->
         <article class="p-4 rounded shadow-sm border-left
        mb-4">
-          <a href="<?=base_url('Registration/hallbooking')?>" class="d-flex align-items-center btn btn-danger">
+          <a href="<?=base_url('Test/index')?>" class="d-flex align-items-center btn btn-danger">
 
             <span class="bi bi-box h5"></span>
             <h5 class="ml-2">User Booking</h5>

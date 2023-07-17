@@ -55,10 +55,12 @@ class Registraion_model extends CI_Model
                 return false;
             }
         }
-
-		public function getname(){
-			return $this->db->get('hall')->result();
-		}
+				public function getdepts(){
+					return $this->db->get('dept_name')->result();
+				}
+				public function getyears($dept_id){
+					return $this->db->where('dept_id',$dept_id)->get('years_slot')->result();
+				}
 
 		
     }

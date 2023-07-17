@@ -16,14 +16,6 @@ public function dum()
           $this->load->view('final/dum');
           $this->load->view('admin/footer');
 }
-
-public function index()
-{
-         
-          $this->load->view('admin/header');
-          $this->load->view('final/registrations');
-          $this->load->view('admin/footer');
-}
 public function submit()
 {
           if($this->input->is_ajax_request())
@@ -347,23 +339,30 @@ public function admin_dashboard()
           $this->load->view('final/admin_dashboard');
           $this->load->view('admin/footer');
 }
-public function hallbooking()
-{
-          // $get = $this->input->get();
-          $this->load->view('admin/header');
-          $this->load->view('final/hall_booking');
-          $this->load->view('admin/footer');
-}
-public function booking_index()
+public function add_event()
 {
           // $get = $this->input->get();
           $this->load->view('admin/header');
           $this->load->view('final/booking_form');
           $this->load->view('admin/footer');
 }
-public function getnames(){
-	$halls = $this->registraion_model->getname();
-	$this->load->view('booking_form',array('halls'=>$halls));
-}
+
+	public function add_dept()
+	{
+		$depts = $this->registraion_model->getdepts();
+		$this->load->view('final/registrations',array('depts'=>$depts));
+	}
+
+	public function years()
+	{
+		$dept_id = $this->input->get('dept_id');
+		$years = $this->registraion_model->getyears($dept_id);
+		$html = '<option value="">Select Years</option>';
+		foreach($years as $year){
+			$html .= '<option value="'.$year->year.'">'.$year->year.'</option>';
+		}
+		echo $html;
+	}
+	
 
 }

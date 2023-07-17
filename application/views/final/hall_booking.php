@@ -191,7 +191,7 @@ body {
       </div>
 				
       <div class="col-md-5 center-vertically">
-		<a class='btn btn-danger' href="<?=base_url('Registration/booking_index')?>" class="text-primary fw-bold">BOOK NOW</a>
+		<a class='btn btn-danger' href="<?=base_url('Registration/add_event')?>" class="text-primary fw-bold">BOOK NOW</a>
       </div>
     </div>
 	

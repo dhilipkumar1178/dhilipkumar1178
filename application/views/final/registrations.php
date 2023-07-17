@@ -53,7 +53,12 @@
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
 									<label class="form-label" >Department<span style="font-size:150%;color:red;">*</span></label>
-                    <input type="text" id="" class="form-control form-control-lg" name="department" required >
+									<select name="department" id="department" class="form-control input-lg">
+										<option value="">Select Department</option>
+									<?php foreach($depts as $dept) {?>
+										<option value="<?=$dept->dept_id?>"><?=$dept->department?></option>
+									<?php } ?>
+								</select>
 
                   </div>
                 </div>
@@ -62,7 +67,8 @@
 							<div class="col-md-6 mb-4">
                   <div class="form-outline">
 									<label class="form-label" >Year<span style="font-size:150%;color:red;">*</span></label>
-                    <input type="text" id="" class="form-control form-control-lg" name="year" required >
+									<select type="text" name="year" id="year"  class="form-control">
+    							</select>
                 </div>
               </div>
                 <div class="col-md-6 mb-4 d-flex align-items-center">
@@ -147,7 +153,25 @@
                 
     });
     
-
+		$(document).ready(function(){
+		$("#department").change(function(){
+			var dept_id = $(this).val();
+			if(dept_id!=""){
+				$.ajax({
+					url:"<?=base_url('registration/years')?>",
+					method:"get",
+					data:{dept_id:dept_id},
+					success:function(data){
+						$("#year").html(data);
+						$("#amount").html(' <option value="">Select Slot</option>');
+					}
+				});
+			}else{
+				$("#year").html('  <option value="">Select Time</option>');
+				$('#amount').html(' <option value="">Select Slot</option>');
+			}
+		});
+	});
 
 </script>
 </html>

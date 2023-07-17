@@ -60,7 +60,7 @@
                 </div>
             </form>
             <div class="mt-3">
-                <p class="mb-0  text-center">Don't have an account? <a href="<?=base_url('Registration/index')?>" class="text-primary fw-bold">Sign Up</a></p>
+                <p class="mb-0  text-center">Don't have an account? <a href="<?=base_url('Registration/add_dept')?>" class="text-primary fw-bold">Sign Up</a></p>
                 
             </div>
         </div>
