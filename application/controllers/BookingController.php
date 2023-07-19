@@ -1,24 +1,30 @@
 <?php
-class BookingController extends CI_Controller {
-	public function __construct(){
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-		parent::__construct();
-		$this->load->model('TimeSlotModel');
-	}
+class BookingController extends CI_Controller {
+    public function __construct() {
+        parent::__construct();
+        $this->load->model('BookingModel');
+    }
+
     public function index() {
-        $this->load->view('final/calendar_view');
+        $data['available_slots'] = $this->BookingModel->getAvailableSlots();
+        $this->load->view('final/booking_view', $data);
     }
-    
-    public function getTimeSlots() {
-        $selectedDate = $this->input->post('selected_date');
-        
-        // Query the database for available time slots
-        $availableTimeSlots = $this->TimeSlotModel->getAvailableTimeSlots($selectedDate);
-        
-        // Return the response as JSON
-        $response['time_slots'] = $availableTimeSlots;
-        echo json_encode($response);
+
+    public function bookSlot() {
+        $date = $this->input->post('date');
+        $time_slot = $this->input->post('time_slot');
+        $user_name = $this->input->post('user_name');
+        $user_email = $this->input->post('user_email');
+
+        $is_booked = $this->BookingModel->bookTimeSlot($date, $time_slot, $user_name, $user_email);
+
+        if ($is_booked) {
+            echo json_encode(array('status' => 'success'));
+        } else {
+            echo json_encode(array('status' => 'error', 'message' => 'Time slot is not available.'));
+        }
     }
-	
 }
 ?>
