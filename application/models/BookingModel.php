@@ -38,5 +38,12 @@ class BookingModel extends CI_Model {
 
         return false;
     }
+	public function getAll_bookings()
+          {
+            // $payslip=$this->db->GET('payslip')->result();
+            $booking=$this->db->select('a.*,b.products')->from('bookings as a')->join('products as b','b.id=a.id')->get()->result_array();
+             var_dump($this->db->last_query());die;
+            return $booking;
+          }
 }
-?>
+?>        

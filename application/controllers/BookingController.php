@@ -26,5 +26,9 @@ class BookingController extends CI_Controller {
             echo json_encode(array('status' => 'error', 'message' => 'Time slot is not available.'));
         }
     }
+	public function booking_list() {
+        $this->load->view('final/booking_list_view');
+		$data['bookings']=$this->BookingModel->getAll_bookings();
+    }
 }
 ?>
